@@ -119,6 +119,7 @@ main {
     font-size: 0.95rem;
     display: -webkit-box;
     -webkit-line-clamp: 3;
+    line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     margin-bottom: 1.5rem;
@@ -239,8 +240,13 @@ footer {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .hidden {
@@ -259,6 +265,7 @@ footer {
         gap: 1rem;
         text-align: center;
     }
+
     h1 {
         font-size: 2.5rem;
     }
