@@ -1,0 +1,59 @@
+name: Update Project Data
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Run daily at midnight
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Fetch Star List Data
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Query to get all lists and their items
+          QUERY='query($login: String!) {
+            user(login: $login) {
+              lists(first: 20) {
+                nodes {
+                  name
+                  items(first: 100) {
+                    nodes {
+                      ... on Repository {
+                        name
+                        owner { login }
+                        description
+                        homepageUrl
+                        url
+                        stargazerCount
+                        primaryLanguage { name color }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }'
+          
+          # Fetch the data using gh cli
+          # Note: The login is hardcoded to kuancheen as requested
+          DATA=$(gh api graphql -f query="$QUERY" -F login='kuancheen')
+          
+          # Filter the specific list named "web-apps" (handling the potential icons/emoji in name)
+          # We look for the list that matches the slug "web-apps" or contains "web-apps"
+          # Then we extract the repository nodes.
+          echo "$DATA" | jq '[.data.user.lists.nodes[] | select(.name | contains("web-apps")) .items.nodes[]]' > data.json
+
+      - name: Commit and Push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update project data from GitHub Stars" && git push)
