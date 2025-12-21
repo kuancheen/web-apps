@@ -1,4 +1,7 @@
-# Featured Web Apps 🕸️
+# Featured Web Apps (v1.0.1) 🕸️
+
+![Version](https://img.shields.io/badge/version-v1.0.1-6366f1?style=flat-square)
+![Status](https://img.shields.io/badge/status-active-success?style=flat-square)
 
 A premium, automated showcase of kuancheen's curated web applications from GitHub Star Lists.
 
