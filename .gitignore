@@ -1,0 +1,14 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Project files
+node_modules/
+dist/
+build/
+.env
+*.log
+
+# Agent files
+.agent/
+!.agent/workflows/
