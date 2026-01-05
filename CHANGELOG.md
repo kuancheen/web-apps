@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.1.1] - 2026-01-06
+
+### Fixed
+- **JSON Corruption**: Resolved git conflict markers in `data.json` that caused the "Error loading projects" crash.
+
 ## [v1.1.0] - 2026-01-06
 
 ### Added

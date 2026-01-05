@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-06T04:00:00Z",
+  "lastUpdated": "2026-01-06T04:06:00Z",
   "repositories": [
     {
       "name": "christmas2025-blesseddraw",
@@ -29,21 +29,6 @@
         "color": "#663399"
       }
     },
-<<<<<<< HEAD
-    "description": "A beautiful, mobile-first web application for tracking attendance across different age groups.",
-    "homepageUrl": "",
-    "url": "https://github.com/kuancheen/attendance-counter-app",
-    "stargazerCount": 1,
-    "primaryLanguage": {
-      "name": "JavaScript",
-      "color": "#f1e05a"
-    }
-  },
-  {
-    "name": "md-viewer",
-    "owner": {
-      "login": "kuancheen"
-=======
     {
       "name": "md-viewer",
       "owner": {
@@ -57,7 +42,6 @@
         "name": "CSS",
         "color": "#663399"
       }
->>>>>>> 9678ed6 (feat: add last updated metadata to data sync)
     },
     {
       "name": "dmarc-analyzer",
