@@ -7,6 +7,8 @@
 ![Status](https://img.shields.io/badge/status-active-success?style=flat-square)
 ![Live Demo](https://img.shields.io/badge/demo-online-green.svg?style=flat-square)
 
+> You can view the live demo by clicking the badge above or by [visiting this link](https://kuancheen.github.io/web-apps).
+
 A premium, automated showcase of kuancheen's curated web applications from GitHub Star Lists.
 
 ---
