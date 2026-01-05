@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.1.2] - 2026-01-06
+
+### Fixed
+- **Version Mismatch**: Fixed an issue where `app.js` was loaded with an old version parameter (`v1.0.1`), causing it to fail when reading the new data structure.
+- **Cache Busting**: Ensured all asset links are correctly versioned for consistent updates.
+
 ## [v1.1.1] - 2026-01-06
 
 ### Fixed
