@@ -18,7 +18,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Query to get all lists and their items
+          # Query to get all lists and their items, including README content for hits.sh extraction
           QUERY='query($login: String!) {
             user(login: $login) {
               lists(first: 20) {
@@ -34,6 +34,11 @@ jobs:
                         url
                         stargazerCount
                         primaryLanguage { name color }
+                        readme: object(expression: "HEAD:README.md") {
+                          ... on Blob {
+                            text
+                          }
+                        }
                       }
                     }
                   }
@@ -43,16 +48,21 @@ jobs:
           }'
           
           # Fetch the data using gh cli
-          # Note: The login is hardcoded to kuancheen as requested
           DATA=$(gh api graphql -f query="$QUERY" -F login='kuancheen')
           
           # Get current timestamp in ISO 8601 format
           TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
           
-          # Filter the specific list named "web-apps" and wrap with metadata
+          # Process the data:
+          # 1. Filter the specific list named "web-apps"
+          # 2. Extract hits.sh URL from README text using jq match
+          # 3. Clean up the object by removing the raw readme text to keep data.json small
           echo "$DATA" | jq --arg timestamp "$TIMESTAMP" '{
             lastUpdated: $timestamp,
-            repositories: [.data.user.lists.nodes[] | select(.name | contains("web-apps")) .items.nodes[]]
+            repositories: [.data.user.lists.nodes[] | select(.name | contains("web-apps")) .items.nodes[] | 
+              . + {hitsUrl: (try (.readme.text | capture("(?<url>https://hits\\.sh/[^\\\"\\) \\n]+)") | .url) catch null)} |
+              del(.readme)
+            ]
           }' > data.json
 
       - name: Commit and Push changes

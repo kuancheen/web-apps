@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.4.0] - 2026-01-06
+
+### Added
+- **Precise View Counters**: The data synchronization process now extracts exact `hits.sh` URLs from each repository's README. This ensures that the view counts displayed on the showcase cards perfectly match the counts on the individual project pages, resolving issues where counts were split across different URL paths.
+
+### Changed
+- **Branding Sync**: Standardized the `hits.sh` fallback path to `github.com/owner/repo` for improved consistency across the ecosystem.
+
 ## [v1.3.0] - 2026-01-06
 
 ### Added
