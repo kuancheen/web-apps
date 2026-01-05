@@ -220,6 +220,12 @@ footer {
     opacity: 0.3;
 }
 
+.last-sync {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    cursor: help;
+}
+
 /* Loader */
 .loader-container {
     display: flex;

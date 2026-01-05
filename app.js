@@ -8,10 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const response = await fetch('data.json');
             if (!response.ok) throw new Error('Failed to fetch data');
             const data = await response.json();
-            
-            // The data structure from GraphQL will be processed by the GitHub Action
-            // but we expect an array of repository objects.
-            renderApps(data);
+
+            // Extract repositories from the new data structure
+            const apps = data.repositories || [];
+            const lastUpdated = data.lastUpdated;
+
+            renderApps(apps, lastUpdated);
         } catch (error) {
             console.error('Error loading apps:', error);
             loader.classList.add('hidden');
@@ -20,9 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function renderApps(apps) {
+    function renderApps(apps, lastUpdated) {
         loader.classList.add('hidden');
-        
+
         if (!apps || apps.length === 0) {
             emptyState.classList.remove('hidden');
             return;
@@ -33,16 +35,21 @@ document.addEventListener('DOMContentLoaded', () => {
             const card = createAppCard(app, index);
             appGrid.appendChild(card);
         });
+
+        // Update the footer with last sync time if available
+        if (lastUpdated) {
+            updateLastSyncTime(lastUpdated);
+        }
     }
 
     function createAppCard(app, index) {
         const div = document.createElement('div');
         div.className = 'app-card';
         div.style.animationDelay = `${index * 0.1}s`;
-        
+
         const langColor = app.primaryLanguage?.color || '#8b949e';
         const langName = app.primaryLanguage?.name || 'Unknown';
-        
+
         div.innerHTML = `
             <div class="card-header">
                 <h3 class="card-title">
@@ -75,6 +82,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         return div;
+    }
+
+    function updateLastSyncTime(timestamp) {
+        const lastSyncElement = document.getElementById('last-sync');
+        if (!lastSyncElement) return;
+
+        const date = new Date(timestamp);
+        const now = new Date();
+        const diffMs = now - date;
+        const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
+        const diffMins = Math.floor(diffMs / (1000 * 60));
+
+        let timeAgo;
+        if (diffHours >= 24) {
+            const diffDays = Math.floor(diffHours / 24);
+            timeAgo = `${diffDays} day${diffDays > 1 ? 's' : ''} ago`;
+        } else if (diffHours >= 1) {
+            timeAgo = `${diffHours} hour${diffHours > 1 ? 's' : ''} ago`;
+        } else if (diffMins >= 1) {
+            timeAgo = `${diffMins} minute${diffMins > 1 ? 's' : ''} ago`;
+        } else {
+            timeAgo = 'just now';
+        }
+
+        lastSyncElement.textContent = `Last synced: ${timeAgo}`;
+        lastSyncElement.title = `Last updated: ${date.toLocaleString()}`;
     }
 
     fetchApps();

@@ -1,23 +1,35 @@
-[
-  {
-    "name": "christmas2025-blesseddraw",
-    "owner": {
-      "login": "kuancheen"
+{
+  "lastUpdated": "2026-01-06T04:00:00Z",
+  "repositories": [
+    {
+      "name": "christmas2025-blesseddraw",
+      "owner": {
+        "login": "kuancheen"
+      },
+      "description": "This is a self-contained web application designed to facilitate real-time, non-repeating number draws for jackpot prizes. It runs entirely in your browser using local storage for persistence.",
+      "homepageUrl": "https://kuancheen.github.io/christmas2025-blesseddraw/",
+      "url": "https://github.com/kuancheen/christmas2025-blesseddraw",
+      "stargazerCount": 1,
+      "primaryLanguage": {
+        "name": "JavaScript",
+        "color": "#f1e05a"
+      }
     },
-    "description": "This is a self-contained web application designed to facilitate real-time, non-repeating number draws for jackpot prizes. It runs entirely in your browser using local storage for persistence.",
-    "homepageUrl": "https://kuancheen.github.io/christmas2025-blesseddraw/",
-    "url": "https://github.com/kuancheen/christmas2025-blesseddraw",
-    "stargazerCount": 1,
-    "primaryLanguage": {
-      "name": "JavaScript",
-      "color": "#f1e05a"
-    }
-  },
-  {
-    "name": "attendance-counter-app",
-    "owner": {
-      "login": "kuancheen"
+    {
+      "name": "attendance-counter-app",
+      "owner": {
+        "login": "kuancheen"
+      },
+      "description": "A beautiful, mobile-first web application for tracking attendance across different age groups.",
+      "homepageUrl": "",
+      "url": "https://github.com/kuancheen/attendance-counter-app",
+      "stargazerCount": 1,
+      "primaryLanguage": {
+        "name": "CSS",
+        "color": "#663399"
+      }
     },
+<<<<<<< HEAD
     "description": "A beautiful, mobile-first web application for tracking attendance across different age groups.",
     "homepageUrl": "",
     "url": "https://github.com/kuancheen/attendance-counter-app",
@@ -31,70 +43,77 @@
     "name": "md-viewer",
     "owner": {
       "login": "kuancheen"
+=======
+    {
+      "name": "md-viewer",
+      "owner": {
+        "login": "kuancheen"
+      },
+      "description": "A simple, premium web application to view GitHub Markdown files by providing their URL in the query string.",
+      "homepageUrl": "",
+      "url": "https://github.com/kuancheen/md-viewer",
+      "stargazerCount": 1,
+      "primaryLanguage": {
+        "name": "CSS",
+        "color": "#663399"
+      }
+>>>>>>> 9678ed6 (feat: add last updated metadata to data sync)
     },
-    "description": "A simple, premium web application to view GitHub Markdown files by providing their URL in the query string.",
-    "homepageUrl": "",
-    "url": "https://github.com/kuancheen/md-viewer",
-    "stargazerCount": 1,
-    "primaryLanguage": {
-      "name": "CSS",
-      "color": "#663399"
-    }
-  },
-  {
-    "name": "dmarc-analyzer",
-    "owner": {
-      "login": "kuancheen"
+    {
+      "name": "dmarc-analyzer",
+      "owner": {
+        "login": "kuancheen"
+      },
+      "description": "A beautiful, privacy-focused web application for analyzing DMARC email authentication reports",
+      "homepageUrl": null,
+      "url": "https://github.com/kuancheen/dmarc-analyzer",
+      "stargazerCount": 1,
+      "primaryLanguage": {
+        "name": "JavaScript",
+        "color": "#f1e05a"
+      }
     },
-    "description": "A beautiful, privacy-focused web application for analyzing DMARC email authentication reports",
-    "homepageUrl": null,
-    "url": "https://github.com/kuancheen/dmarc-analyzer",
-    "stargazerCount": 1,
-    "primaryLanguage": {
-      "name": "JavaScript",
-      "color": "#f1e05a"
-    }
-  },
-  {
-    "name": "statement-consolidator",
-    "owner": {
-      "login": "kuancheen"
+    {
+      "name": "statement-consolidator",
+      "owner": {
+        "login": "kuancheen"
+      },
+      "description": "AI-powered financial statement consolidation tool",
+      "homepageUrl": null,
+      "url": "https://github.com/kuancheen/statement-consolidator",
+      "stargazerCount": 1,
+      "primaryLanguage": {
+        "name": "JavaScript",
+        "color": "#f1e05a"
+      }
     },
-    "description": "AI-powered financial statement consolidation tool",
-    "homepageUrl": null,
-    "url": "https://github.com/kuancheen/statement-consolidator",
-    "stargazerCount": 1,
-    "primaryLanguage": {
-      "name": "JavaScript",
-      "color": "#f1e05a"
-    }
-  },
-  {
-    "name": "pdf-splitter",
-    "owner": {
-      "login": "kuancheen"
+    {
+      "name": "pdf-splitter",
+      "owner": {
+        "login": "kuancheen"
+      },
+      "description": "SplitPDF is a modern, premium web application that allows users to upload a landscape PDF and split each page down the middle into two portrait pages. This is particularly useful for scanned books or documents where two pages are captured in a single landscape frame.",
+      "homepageUrl": null,
+      "url": "https://github.com/kuancheen/pdf-splitter",
+      "stargazerCount": 1,
+      "primaryLanguage": {
+        "name": "CSS",
+        "color": "#663399"
+      }
     },
-    "description": "SplitPDF is a modern, premium web application that allows users to upload a landscape PDF and split each page down the middle into two portrait pages. This is particularly useful for scanned books or documents where two pages are captured in a single landscape frame.",
-    "homepageUrl": null,
-    "url": "https://github.com/kuancheen/pdf-splitter",
-    "stargazerCount": 1,
-    "primaryLanguage": {
-      "name": "CSS",
-      "color": "#663399"
+    {
+      "name": "pdf-reorder",
+      "owner": {
+        "login": "kuancheen"
+      },
+      "description": "A premium, client-side web application to reorder pages of a PDF file.",
+      "homepageUrl": "",
+      "url": "https://github.com/kuancheen/pdf-reorder",
+      "stargazerCount": 1,
+      "primaryLanguage": {
+        "name": "HTML",
+        "color": "#e34c26"
+      }
     }
-  },
-  {
-    "name": "pdf-reorder",
-    "owner": {
-      "login": "kuancheen"
-    },
-    "description": "A premium, client-side web application to reorder pages of a PDF file.",
-    "homepageUrl": "",
-    "url": "https://github.com/kuancheen/pdf-reorder",
-    "stargazerCount": 1,
-    "primaryLanguage": {
-      "name": "HTML",
-      "color": "#e34c26"
-    }
-  }
-]
+  ]
+}

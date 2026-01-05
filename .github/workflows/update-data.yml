@@ -46,10 +46,14 @@ jobs:
           # Note: The login is hardcoded to kuancheen as requested
           DATA=$(gh api graphql -f query="$QUERY" -F login='kuancheen')
           
-          # Filter the specific list named "web-apps" (handling the potential icons/emoji in name)
-          # We look for the list that matches the slug "web-apps" or contains "web-apps"
-          # Then we extract the repository nodes.
-          echo "$DATA" | jq '[.data.user.lists.nodes[] | select(.name | contains("web-apps")) .items.nodes[]]' > data.json
+          # Get current timestamp in ISO 8601 format
+          TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          
+          # Filter the specific list named "web-apps" and wrap with metadata
+          echo "$DATA" | jq --arg timestamp "$TIMESTAMP" '{
+            lastUpdated: $timestamp,
+            repositories: [.data.user.lists.nodes[] | select(.name | contains("web-apps")) .items.nodes[]]
+          }' > data.json
 
       - name: Commit and Push changes
         run: |
