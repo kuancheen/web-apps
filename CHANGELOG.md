@@ -2,7 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.0.1] - 2025-12-22
+## [v1.1.0] - 2026-01-06
+
+### Added
+- **Sync Metadata**: Added `lastUpdated` timestamp to `data.json` to track sync freshnes.
+- **Sync Status Display**: Added "Last synced" human-readable time in the footer with a precise tooltip.
+- **Data Structure**: Enhanced `data.json` with a metadata wrapper for better maintainability.
+
+### Changed
+- **Copyright Year**: Updated copyright notices to 2025-2026.
+
+## [v1.0.1] - 2025-12-21
 
 ### Fixed
 - Fixed typo in `.github/workflows/deploy.yml` that caused deployment failures.

@@ -1,6 +1,6 @@
-# Featured Web Apps (v1.0.1) 🕸️
+# Featured Web Apps (v1.1.0) 🕸️
 
-![Version](https://img.shields.io/badge/version-v1.0.1-6366f1?style=flat-square)
+![Version](https://img.shields.io/badge/version-v1.1.0-6366f1?style=flat-square)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Semantic Versioning](https://img.shields.io/badge/semver-2.0.0-blue?style=flat-square)
 ![Views](https://hits.sh/kuancheen.github.io/web-apps.svg?view=today-total&style=flat&label=👁️%20Views&extraCount=0&color=6366f1)
@@ -8,6 +8,10 @@
 ![Live Demo](https://img.shields.io/badge/demo-online-green.svg?style=flat-square)
 
 A premium, automated showcase of kuancheen's curated web applications from GitHub Star Lists.
+
+---
+
+© 2025-2026 [kuancheen](https://github.com/kuancheen)
 
 ## Features ✨
 
