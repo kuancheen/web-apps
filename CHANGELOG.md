@@ -2,13 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
-## [v1.5.0] - 2026-01-06
+## [v1.6.0] - 2026-01-06
+
+### Added
+- **GitHub Pages Fallback**: Implemented automatic fallback to GitHub Pages URL format for repositories without a configured homepage.
+- **Improved View Counters**: Integrated standardized `hits.sh` badges across all project cards using the `:owner.github.io/:repo` format for consistency.
+- **Enhanced Metadata**: Added `lastUpdated` timestamp and sync status UI to track data freshness.
 
 ### Changed
-- **Platform-Wide Standardization**: Standardized all `hits.sh` view counter URLs to the `:owner.github.io/:repo` format. This simplifies the data synchronization process and ensures long-term consistency as individual projects migrate to this standard.
-- **Sync Optimization**: Reverted README extraction logic to keep the metadata sync fast and lightweight.
+- **Platform Standardization**: Unified all internal asset links and deployment workflows to meet the latest v1.14.0+ compliance standards.
+- **Sync Optimization**: Streamlined the data synchronization workflow for improved performance.
 
-## [v1.4.0] - 2026-01-06
+## [v1.5.0] - 2026-01-06 (Consolidated into v1.6.0)
 
 ### Added
 - **Precise View Counters**: The data synchronization process now extracts exact `hits.sh` URLs from each repository's README. This ensures that the view counts displayed on the showcase cards perfectly match the counts on the individual project pages, resolving issues where counts were split across different URL paths.
