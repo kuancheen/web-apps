@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.5.0] - 2026-01-06
+
+### Changed
+- **Platform-Wide Standardization**: Standardized all `hits.sh` view counter URLs to the `:owner.github.io/:repo` format. This simplifies the data synchronization process and ensures long-term consistency as individual projects migrate to this standard.
+- **Sync Optimization**: Reverted README extraction logic to keep the metadata sync fast and lightweight.
+
 ## [v1.4.0] - 2026-01-06
 
 ### Added

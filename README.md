@@ -1,6 +1,6 @@
-# Featured Web Apps (v1.4.0) 🕸️
+# Featured Web Apps (v1.5.0) 🕸️
 
-![Version](https://img.shields.io/badge/version-v1.4.0-6366f1?style=flat-square)
+![Version](https://img.shields.io/badge/version-v1.5.0-6366f1?style=flat-square)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Semantic Versioning](https://img.shields.io/badge/semver-2.0.0-blue?style=flat-square)
 ![Views](https://hits.sh/kuancheen.github.io/web-apps.svg?view=today-total&style=flat&label=👁️%20Views&extraCount=0&color=6366f1)

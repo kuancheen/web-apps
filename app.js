@@ -53,8 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Use homepageUrl if available, otherwise fallback to standard GitHub Pages URL format
         const liveDemoUrl = app.homepageUrl || `https://${app.owner.login}.github.io/${app.name}`;
 
-        // Construct hits.sh badge URL: Prioritize extracted URL, otherwise fallback to standardized path
-        const hitsBadgeUrl = app.hitsUrl || `https://hits.sh/github.com/${app.owner.login}/${app.name}.svg?view=today-total&style=flat-square&label=%F0%9F%91%81%EF%B8%8F%20Views&color=6366f1`;
+        // Construct standardized hits.sh badge URL
+        const hitsBadgeUrl = `https://hits.sh/${app.owner.login}.github.io/${app.name}.svg?view=today-total&style=flat-square&label=%F0%9F%91%81%EF%B8%8F%20Views&color=6366f1`;
 
         div.innerHTML = `
             <div class="card-header">
