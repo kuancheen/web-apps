@@ -50,6 +50,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const langColor = app.primaryLanguage?.color || '#8b949e';
         const langName = app.primaryLanguage?.name || 'Unknown';
 
+        // Use homepageUrl if available, otherwise fallback to standard GitHub Pages URL format
+        const liveDemoUrl = app.homepageUrl || `https://${app.owner.login}.github.io/${app.name}`;
+
         div.innerHTML = `
             <div class="card-header">
                 <h3 class="card-title">
@@ -68,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             </div>
             <div class="card-actions">
-                ${app.homepageUrl ? `<a href="${app.homepageUrl}" target="_blank" class="btn btn-primary">Live Demo</a>` : ''}
+                <a href="${liveDemoUrl}" target="_blank" class="btn btn-primary">Live Demo</a>
                 <a href="${app.url}" target="_blank" class="btn btn-secondary">Source Code</a>
             </div>
         `;
@@ -76,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Make the whole card clickable to the live demo if it exists, otherwise the repo
         div.addEventListener('click', (e) => {
             if (e.target.tagName !== 'A') {
-                const targetUrl = app.homepageUrl || app.url;
+                const targetUrl = liveDemoUrl || app.url;
                 window.open(targetUrl, '_blank');
             }
         });

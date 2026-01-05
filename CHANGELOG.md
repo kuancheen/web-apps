@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.2.0] - 2026-01-06
+
+### Added
+- **GitHub Pages Fallback**: Implemented automatic fallback to GitHub Pages URL format (`https://owner.github.io/repo`) in `app.js` for repositories where no homepage URL is explicitly configured in GitHub settings. This ensures every project card has a functional "Live Demo" button.
+
+### Changed
+- **Version Bump**: Bumped project version to `v1.2.0` across all documentation and asset links.
+
 ## [v1.1.2] - 2026-01-06
 
 ### Fixed
