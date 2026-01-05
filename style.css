@@ -154,6 +154,15 @@ main {
     gap: 0.4rem;
 }
 
+.star-count svg {
+    margin-right: 0.3rem;
+    color: #e3b341;
+}
+
+.card-hits {
+    height: 20px;
+}
+
 .card-actions {
     margin-top: 1.5rem;
     display: flex;

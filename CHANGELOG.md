@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.3.0] - 2026-01-06
+
+### Added
+- **Repository-Level View Counters**: Added `hits.sh` badges to each project card, providing live insight into the popularity and view counts of each featured application. This follows the same premium styling as the main application's view counter.
+
 ## [v1.2.0] - 2026-01-06
 
 ### Added
