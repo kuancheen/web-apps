@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-07T01:06:56Z",
+  "lastUpdated": "2026-01-07T03:08:44Z",
   "repositories": [
     {
       "name": "christmas2025-blesseddraw",
@@ -13,7 +13,8 @@
       "primaryLanguage": {
         "name": "JavaScript",
         "color": "#f1e05a"
-      }
+      },
+      "friendlyName": "Blessed Draw App"
     },
     {
       "name": "attendance-counter-app",
@@ -27,7 +28,8 @@
       "primaryLanguage": {
         "name": "JavaScript",
         "color": "#f1e05a"
-      }
+      },
+      "friendlyName": "Attendance Counter Web App"
     },
     {
       "name": "md-viewer",
@@ -41,7 +43,8 @@
       "primaryLanguage": {
         "name": "CSS",
         "color": "#663399"
-      }
+      },
+      "friendlyName": "GitHub Markdown Viewer [v1.3.1]"
     },
     {
       "name": "dmarc-analyzer",
@@ -55,7 +58,8 @@
       "primaryLanguage": {
         "name": "JavaScript",
         "color": "#f1e05a"
-      }
+      },
+      "friendlyName": "DMARC Report Analyzer"
     },
     {
       "name": "statement-consolidator",
@@ -69,7 +73,8 @@
       "primaryLanguage": {
         "name": "JavaScript",
         "color": "#f1e05a"
-      }
+      },
+      "friendlyName": "💰 Statement Consolidator"
     },
     {
       "name": "pdf-splitter",
@@ -83,7 +88,8 @@
       "primaryLanguage": {
         "name": "CSS",
         "color": "#663399"
-      }
+      },
+      "friendlyName": "PDFSplitter"
     },
     {
       "name": "pdf-reorder",
@@ -97,7 +103,8 @@
       "primaryLanguage": {
         "name": "HTML",
         "color": "#e34c26"
-      }
+      },
+      "friendlyName": "PDF Reorder v1.0.0"
     },
     {
       "name": "receipt-scanner",
@@ -111,7 +118,8 @@
       "primaryLanguage": {
         "name": "JavaScript",
         "color": "#f1e05a"
-      }
+      },
+      "friendlyName": "🧾 Receipt Scanner"
     }
   ]
 }
