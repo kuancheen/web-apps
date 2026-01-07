@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.7.1] - 2026-01-07
+
+### Fixed
+- **Deployment Lag**: Fixed an issue where data updates would not trigger a new site deployment, resulting in stale content. The sync workflow now explicitly triggers a rebuild.
+- **Browser Caching**: Implemented aggressive cache-busting for `data.json` fetches (`?t=timestamp`) to ensure users always see the latest project list immediately.
+
 ## [v1.7.0] - 2026-01-07
 
 ### Added

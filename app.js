@@ -5,7 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function fetchApps() {
         try {
-            const response = await fetch('data.json');
+            // Append timestamp to prevent browser caching of the JSON file
+            const response = await fetch(`data.json?t=${new Date().getTime()}`);
             if (!response.ok) throw new Error('Failed to fetch data');
             const data = await response.json();
 
