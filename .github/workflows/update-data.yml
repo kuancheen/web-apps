@@ -18,7 +18,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Query to get all lists and their items
+          # Query to get all lists and their items, including README for title extraction
           QUERY='query($login: String!) {
             user(login: $login) {
               lists(first: 20) {
@@ -34,6 +34,11 @@ jobs:
                         url
                         stargazerCount
                         primaryLanguage { name color }
+                        readme: object(expression: "HEAD:README.md") {
+                          ... on Blob {
+                            text
+                          }
+                        }
                       }
                     }
                   }
@@ -48,10 +53,13 @@ jobs:
           # Get current timestamp in ISO 8601 format
           TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
           
-          # Filter the specific list named "web-apps" and wrap with metadata
+          # Filter the specific list named "web-apps" and extract friendlyName from README
           echo "$DATA" | jq --arg timestamp "$TIMESTAMP" '{
             lastUpdated: $timestamp,
-            repositories: [.data.user.lists.nodes[] | select(.name | contains("web-apps")) .items.nodes[]]
+            repositories: [.data.user.lists.nodes[] | select(.name | contains("web-apps")) .items.nodes[] |
+              . + {friendlyName: (try (.readme.text | split("\n") | map(select(startswith("# "))) | .[0] | sub("^# "; "") | sub(" \\([^\\)]+\\)$"; "") | sub(" [^\\w]*$"; "")) catch null)} |
+              del(.readme)
+            ]
           }' > data.json
 
       - name: Commit and Push changes

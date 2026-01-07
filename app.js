@@ -56,11 +56,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // Construct standardized hits.sh badge URL
         const hitsBadgeUrl = `https://hits.sh/${app.owner.login}.github.io/${app.name}.svg?view=today-total&style=flat-square&label=%F0%9F%91%81%EF%B8%8F%20Views&color=6366f1`;
 
+        const displayName = app.friendlyName || app.name;
+        const repoSubtitle = app.friendlyName ? `<div class="repo-subtitle">${app.name}</div>` : '';
+
         div.innerHTML = `
             <div class="card-header">
-                <h3 class="card-title">
-                    <span>${app.name}</span>
-                </h3>
+                <h3 class="card-title">${displayName}</h3>
+                ${repoSubtitle}
                 <p class="card-description">${app.description || 'No description provided.'}</p>
                 <div class="card-meta">
                     <span class="lang-badge">
