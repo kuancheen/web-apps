@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.7.0] - 2026-01-07
+
+### Added
+- **Friendly Names**: Implemented automated extraction of "Friendly Names" (e.g., "Blessed Draw App") from each repository's README title.
+- **Enhanced UI**: Updated project cards to display the friendly name prominently as the main title, with the repository name (`repo-name`) as a cleaner subtitle for technical reference.
+
+### Changed
+- **Data Sync**: Updated GitHub Actions workflow to parse README content during the daily sync, enriching `data.json` with human-readable titles.
+
 ## [v1.6.0] - 2026-01-06
 
 ### Added

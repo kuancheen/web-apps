@@ -46,7 +46,7 @@ Automatically run this workflow after:
 
 3. **Update Server-Side Templates** (Server-Side Apps Only):
    - **Update Version String**: Find the version string in your template footers (e.g., `views/partials/footer.ejs`) and increment it.
-   - **Update Cache Bursting**: Search for all internal `.css` and `.js` links in your templates (e.g., `views/*.ejs`) and update the `?v=` parameter to the new version.
+   - **Update Cache Busting**: Search for all internal `.css` and `.js` links in your templates (e.g., `views/*.ejs`) and update the `?v=` parameter to the new version.
      - Example: `href="/style.css?v=1.0.0"` -> `href="/style.css?v=1.1.0"`
 
 4. **Update CHANGELOG.md**:
