@@ -63,6 +63,8 @@ jobs:
           }' > data.json
 
       - name: Commit and Push changes
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
