@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.7.2] - 2026-01-08
+
+### Fixed
+- **CI/CD Authorization**: Granted `actions: write` permission to the data update workflow. This resolves the `403 Forbidden` error that prevented the automatic triggering of the deployment pipeline.
+
 ## [v1.7.1] - 2026-01-07
 
 ### Fixed
