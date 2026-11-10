@@ -75,9 +75,6 @@ jobs:
             git commit -m "Update project data from GitHub Stars"
             git push
             
-            # Trigger the Pages Deployment workflow manually to ensure the site rebuilds
-            echo "Data updated. Triggering deployment..."
-            gh workflow run "Deploy to GitHub Pages" --ref main
           else
             echo "No changes to data.json"
           fi
